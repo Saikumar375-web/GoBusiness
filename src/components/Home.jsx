@@ -12,11 +12,11 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const [data, setData] = useState({});
-  const jwtToken = Cookies.get("jwt_token");
   useEffect(() => {
     const fetchMetrics = async () => {
       const jwtToken = Cookies.get("jwt_token");
-      const url = "/api/referrals";
+      const url =
+        "https://v9fes04dwf.execute-api.eu-north-1.amazonaws.com/api/referrals";
       const options = {
         method: "GET",
         headers: {

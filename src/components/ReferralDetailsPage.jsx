@@ -21,7 +21,10 @@ const ReferralDetailsPage = () => {
             Authorization: `Bearer ${jwtToken}`,
           },
         };
-        const response = await fetch(`/api/referral/${id}`, options);
+        const response = await fetch(
+          `https://v9fes04dwf.execute-api.eu-north-1.amazonaws.com/api/referrals/${id}`,
+          options,
+        );
 
         if (!response.ok) {
           throw new Error("Unable to load referral details.");
